@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/albumListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@color/darkblack">
+
+
+        <ImageView
+            android:id="@+id/imageViewAlbum"
+            android:layout_width="245dp"
+            android:layout_height="228dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/kali_foreground" />
+
+        <Button
+            android:id="@+id/shufflePlayInAlbum"
+            android:layout_width="174dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/shuffle_play"
+            app:cornerRadius="@android:dimen/app_icon_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumPerformerAndYear" />
+
+        <TextView
+            android:id="@+id/albumName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/song_name"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAlbum" />
+
+        <TextView
+            android:id="@+id/albumPerformerAndYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/by_perfomer"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/albumName"
+            app:layout_constraintTop_toBottomOf="@+id/albumName" />
+
+
+        <!--    TODO height nemoze byt 110dp - na vysku sa musia vojst vsetky elementy-->
+
+        <TextView
+            android:id="@+id/albumByPerofmerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/performer_name"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/albumPerformerAndYear"
+            app:layout_constraintTop_toBottomOf="@+id/albumName" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/year"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/albumByPerofmerName"
+            app:layout_constraintTop_toBottomOf="@+id/albumName" />
+
+        <LinearLayout
+            android:id="@+id/songsInAlbumViewLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/numberOfSongsInAlbum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shufflePlayInAlbum" />
+
+        <TextView
+            android:id="@+id/numberOfSongsInAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/numberOfSongs"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/actorImage"
+            app:layout_constraintTop_toBottomOf="@+id/songsInAlbumViewLinearLayout" />
+
+        <TextView
+            android:id="@+id/songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/songs"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/numberOfSongsInAlbum"
+            app:layout_constraintTop_toBottomOf="@+id/songsInAlbumViewLinearLayout" />
+
+        <TextView
+            android:id="@+id/timeLenghtAllSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/timeLenght"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/songs"
+            app:layout_constraintTop_toBottomOf="@+id/songsInAlbumViewLinearLayout" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/actorImage"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/actor11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfSongsInAlbum" />
+
+        <TextView
+            android:id="@+id/actorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/performer_name"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/actorImage"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfSongsInAlbum" />
+
+        <TextView
+            android:id="@+id/alsoLikeInAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/album_alsolike"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actorImage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/otherActors"
+            android:layout_width="wrap_content"
+            android:layout_height="126dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alsoLikeInAlbum"
+            tools:listitem="@layout/item_performer_in_album_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

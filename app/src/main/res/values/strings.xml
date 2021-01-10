@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Juraj Music</string>
+    <string name="performer_name">Ine Kafe</string>
+    <string name="popular">Popular</string>
+    <string name="liked_songs">Liked Songs</string>
+    <string name="song_name">Je tu niekto?</string>
+    <string name="number_songs">13 songs by</string>
+    <string name="shuffle_play">SHUFFLE PLAY</string>
+    <string name="album_name">Pribeh</string>
+    <string name="album_name_in_song_view">Album #Pribeh</string>
+    <string name="by_perfomer">Album by</string>
+    <string name="numberOfSongs">12</string>
+    <string name="timeLenght">39 min 25 sec</string>
+    <string name="songs">songs * </string>
+    <string name="album_alsolike">You might also like</string>
+    <string name="song_playingfromalbum">PLAYING FROM ALBUM</string>
+    <string name="main_rock">ROCK</string>
+    <string name="main_hiphop">HIP HOP</string>
+    <string name="main_recently">RECENTLY LIKED</string>
+    <string name="main_home">HOME</string>
+    <string name="year">2015</string>
+    <string name="performer">Ine Kafe</string>
+
+
+
+
+</resources>

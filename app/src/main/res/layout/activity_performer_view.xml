@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/performerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkblack"
+        tools:context=".PerformerActivity">
+
+                <ImageView
+                    android:id="@+id/performerImageHeader"
+                    android:layout_width="259dp"
+                    android:layout_height="242dp"
+                    android:layout_marginTop="24dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@color/material_on_background_emphasis_medium"
+                    tools:srcCompat="@color/material_on_background_emphasis_medium" />
+
+
+                <TextView
+                    android:id="@+id/namePerformer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/performer_name"
+                    android:textColor="@color/white"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    android:translationZ="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/performerImageHeader" />
+
+                <Button
+                    android:id="@+id/shufflePlay"
+                    android:layout_width="174dp"
+                    android:layout_height="59dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#009106"
+                    android:text="@string/shuffle_play"
+                    app:cornerRadius="@android:dimen/app_icon_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/namePerformer" />
+
+                <ImageView
+            android:id="@+id/likedSongPicture"
+            android:layout_width="50dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shufflePlay"
+            app:srcCompat="@mipmap/actor3" />
+
+        <TextView
+            android:id="@+id/likedSongsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/liked_songs"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/likedSongPicture"
+            app:layout_constraintTop_toTopOf="@id/likedSongPicture"
+            app:layout_constraintBottom_toTopOf="@id/likedSongsDiscription"
+            tools:layout_editor_absoluteX="74dp" />
+
+        <TextView
+            android:id="@+id/likedSongsDiscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/number_songs"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/likedSongsTextView"
+            app:layout_constraintBottom_toBottomOf="@id/likedSongPicture"
+            app:layout_constraintTop_toBottomOf="@id/likedSongsTextView"
+             />
+
+                <TextView
+                    android:id="@+id/interpret"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/performer"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/likedSongPicture"
+                    app:layout_constraintStart_toEndOf="@+id/likedSongsDiscription"
+                    app:layout_constraintTop_toBottomOf="@id/likedSongsTextView"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+            android:id="@+id/popularSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/popular"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/likedSongPicture" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayouPopularSongs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/albumListView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/popularSongs"></LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/albumListView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:listitem="@layout/activity_performerslistview" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
